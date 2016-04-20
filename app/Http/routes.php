@@ -19,3 +19,12 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('pengajuan-proker', ['as'=>'proker.create', 'uses'=>'ProkerController@create']);
+Route::post('pengajuan-proker', ['as'=>'proker.postCreate', 'uses'=>'ProkerController@postC
+	reate']);
+
+Route::group(['prefix'=>'admin'], function() {
+  Route::get('/', ['as'=>'admin.index', 'uses'=>'Admin/AdminController@index']);
+  Route::get('list-proker', ['as'=>'admin.proker.index', 'uses'=>'Admin/ProkerController@index']);
+});
