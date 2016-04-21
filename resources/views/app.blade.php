@@ -46,8 +46,6 @@ desired effect
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
-    @include('partials.controlsidebar')
-
     @include('partials.footer')
 
 </div><!-- ./wrapper -->

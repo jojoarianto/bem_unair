@@ -25,6 +25,6 @@ Route::post('pengajuan-proker', ['as'=>'proker.postCreate', 'uses'=>'ProkerContr
 	reate']);
 
 Route::group(['prefix'=>'admin'], function() {
-  Route::get('/', ['as'=>'admin.index', 'uses'=>'Admin/AdminController@index']);
-  Route::get('list-proker', ['as'=>'admin.proker.index', 'uses'=>'Admin/ProkerController@index']);
+  Route::get('/', ['as'=>'admin.index', 'uses'=>'Admin\AdminController@index']);
+  Route::get('list-proker', ['as'=>'admin.proker.index', 'uses'=>'Admin\ProkerController@index']);
 });
